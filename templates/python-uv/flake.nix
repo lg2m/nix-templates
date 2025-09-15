@@ -34,8 +34,9 @@
             ]);
 
           shellHook = ''
-            echo "\n[python-uv] Tools available: uv, just, pre-commit"
-            echo "Run 'just setup' to create .venv via uv and install pre-commit hooks.\n"
+            echo "uv: $(uv self version)"
+            echo "pre-commit: $(pre-commit --version)"
+            echo "just: $(just --version)"
           '';
         };
       }
