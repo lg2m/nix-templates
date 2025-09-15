@@ -10,7 +10,7 @@
     templates = {
       python-uv = {
         path = ./templates/python-uv;
-        description = "Python template using uv with ruff/ty/jedi/pylsp/pytest, just, direnv, pre-commit";
+        description = "Python template using uv, just, pre-commit";
       };
     };
   };

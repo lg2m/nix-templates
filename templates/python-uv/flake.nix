@@ -1,5 +1,5 @@
 {
-  description = "Python (uv) dev shell with ruff/ty/jedi/pylsp/pytest, just, pre-commit";
+  description = "Python (uv) dev shell with just and pre-commit";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -25,11 +25,6 @@
             [
               python313
               uv
-              ruff
-              ty
-              python313Packages.python-lsp-server
-              python313Packages.jedi-language-server
-              pytest
               pre-commit
               just
               git
@@ -39,7 +34,7 @@
             ]);
 
           shellHook = ''
-            echo "\n[python-uv] Tools available: uv, ruff, ty, pylsp, jedi, pytest, just, pre-commit"
+            echo "\n[python-uv] Tools available: uv, just, pre-commit"
             echo "Run 'just setup' to create .venv via uv and install pre-commit hooks.\n"
           '';
         };

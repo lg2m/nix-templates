@@ -7,15 +7,3 @@ setup:
     uv pip install -e . && \
     pre-commit install
   @echo "Setup complete. Activate with source: .venv/bin/activate"
-
-test:
-  pytest -q
-
-fmt:
-  ruff format .
-
-lint:
-  ruff check .
-
-typecheck:
-  ty check
