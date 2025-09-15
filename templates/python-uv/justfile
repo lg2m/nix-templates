@@ -1,0 +1,21 @@
+set shell := ["bash", "-uc"]
+
+setup:
+  uv venv --python python3.13 --seed --no-project --force
+  . ./venv/bin/activate && \
+    uv pip install --upgrade pip && \
+    uv pip install -e . && \
+    pre-commit install
+  @echo "Setup complete. Activate with source: .venv/bin/activate"
+
+test:
+  pytest -q
+
+fmt:
+  ruff format .
+
+lint:
+  ruff check .
+
+typecheck:
+  ty check
