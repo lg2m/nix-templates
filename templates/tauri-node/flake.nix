@@ -30,7 +30,7 @@
           packages =
             (with pkgs; [
               pkg-config
-              global-introspection
+              gobject-introspection
               cargo
               nodejs
               cargo-tauri
