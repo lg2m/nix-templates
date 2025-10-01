@@ -11,6 +11,10 @@
         path = ./templates/bun-node;
         description = "Bun + Node using biome, just, and pre-commit.";
       };
+      tauri-node = {
+        path = ./templates/tauri-node;
+        description = "Tauri + Node";
+      };
     };
   };
 }
